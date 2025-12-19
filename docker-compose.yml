@@ -4,7 +4,7 @@ services:
     container_name: profile_projector
     volumes:
       # Use an absolute path inside the Portainer environment for Git stacks
-      - /data/compose/{{stack_id}}:/usr/share/nginx/html:ro
+      - .:/usr/share/nginx/html:ro
     networks:
       - web_net
     restart: unless-stopped
