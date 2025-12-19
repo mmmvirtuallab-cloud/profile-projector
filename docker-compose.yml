@@ -1,0 +1,15 @@
+services:
+  profile-projector:
+    image: nginx:alpine
+    container_name: profile_projector
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    networks:
+      - web_net
+    restart: unless-stopped
+
+networks:
+  web_net:
+    external: true
+    # This name must match exactly what you see in Portainer for your gateway's network
+    name: my-web-suite_web_net

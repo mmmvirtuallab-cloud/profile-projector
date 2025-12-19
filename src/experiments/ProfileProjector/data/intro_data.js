@@ -10,7 +10,7 @@ export const INTRO_CONTENT = {
     buttonLink: "/lab/profile-projector", 
 
     // Main Page Content
-    mainHeading: "Study of Profile Projector and Measurement of Object Dimensions",
+    mainHeading: "Profile Projector ",
     
     // Aim Section
     aimTitle: "Aim",

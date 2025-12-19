@@ -3,18 +3,15 @@ name: Deploy Vite App to GitHub Pages
 on:
   push:
     branches:
-      - main  # ⚠️ Triggers on push to master
-  workflow_dispatch: # Allows manual trigger
+      - main
+  workflow_dispatch:
 
-# Grants permission to write to the gh-pages branch
 permissions:
   contents: write
 
 jobs:
   build-and-deploy:
-    # ⬇️ Only runs if commit message has "build" OR if triggered manually
     if: "contains(github.event.head_commit.message, 'build') || github.event_name == 'workflow_dispatch'"
-    
     runs-on: ubuntu-latest
 
     steps:
@@ -29,13 +26,13 @@ jobs:
           node-version: '20'
 
       - name: 📥 Install dependencies
-        # 'npm ci' is faster and safer for CI pipelines than 'npm install'
         run: npm ci
 
       - name: 🏗️ Build Vite Static Site
         run: |
           npm run build
-          # This file prevents GitHub Pages from ignoring files starting with "_"
+          # Copy the compose file from root to the build output folder
+          cp docker-compose.yml dist/
           touch dist/.nojekyll
 
       - name: 🚀 Deploy to GitHub Pages
