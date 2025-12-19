@@ -3,8 +3,8 @@ services:
     image: nginx:alpine
     container_name: profile_projector
     volumes:
-      # Use an absolute path inside the Portainer environment for Git stacks
-      - .:/usr/share/nginx/html:ro
+      # This points to the internal Portainer folder for your specific stack
+      - /data/compose/5:/usr/share/nginx/html:ro
     networks:
       - web_net
     restart: unless-stopped
