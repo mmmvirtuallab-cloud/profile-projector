@@ -1,0 +1,135 @@
+/* src/IntroPage.css */
+
+/* --- Blue Header --- */
+.intro-header {
+    background-color: #2563EB; /* Bright Royal Blue */
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* --- Button --- */
+.header-btn {
+    background-color: white;
+    color: #2563EB;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-decoration: none; /* In case we use Link */
+    display: inline-block;
+}
+
+.header-btn:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* --- Main Content --- */
+.intro-container {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    margin-top: 80px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.info-card {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    height: fit-content;
+    border: 1px solid #e2e8f0;
+}
+
+.info-card h1 {
+    color: #1e293b;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 30px auto;
+    width: 100%;
+}
+
+.aim-section h3, .ack-section h3 {
+    text-align: left; 
+    color: #1e293b; 
+    margin-bottom: 10px; 
+    margin-top: 0;
+}
+
+.aim-section p, .ack-section p {
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.student-list {
+    text-align: left; 
+    padding-left: 20px; 
+    line-height: 1.6; 
+    color: #475569;
+}
+
+.student-list li {
+    margin-bottom: 5px;
+}
+
+/* ... existing CSS ... */
+
+/* --- Footer --- */
+.intro-footer {
+    background-color: #e2e8f0; /* Slightly darker than the main background */
+    color: #475569;            /* Slate grey text */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;         /* Slightly smaller text */
+    border-top: 1px solid #cbd5e1;
+    width: 100%;
+    /* No need for position:fixed; flex layout handles it */
+}
+
+.intro-footer p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}

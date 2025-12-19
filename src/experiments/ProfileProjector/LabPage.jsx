@@ -540,9 +540,9 @@ function ProfileProjectorLabPage() {
         <p>📱➡️💻</p>
         <button
           className={warningStyles.backButton}
-          onClick={() => navigate("/experiments/profile-projector/Aim")} // Navigate back
+          onClick={() => navigate("/")} // CHANGED: Navigate to the Root/Intro Page
         >
-          ← Back to Experiment Info
+          ← Back to Home
         </button>
       </div>
     );
@@ -559,9 +559,7 @@ function ProfileProjectorLabPage() {
     >
       <header className={styles.header}>
         <h1 className="text-xl font-bold">Profile Projector Virtual Lab</h1>
-        <button onClick={() => navigate("/experiments/profile-projector/Aim")}>
-          ← Back to Experiment
-        </button>
+        <button onClick={() => navigate("/")}>← Back to Experiment</button>
       </header>
 
       <div className={styles.tutorialMessageBar}>

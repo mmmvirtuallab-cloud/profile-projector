@@ -1,6 +1,5 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchExperimentSamples } from "../../../repositories/lab_repo";
 import styles from "./SampleLibrary.module.css";
 
 const BASE_URL_PREFIX = import.meta.env.BASE_URL || "/";
