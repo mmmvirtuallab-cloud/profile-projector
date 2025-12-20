@@ -13,10 +13,7 @@ function App() {
         <Route path="/" element={<IntroPage />} />
 
         {/* --- 2. Dedicated Full-Screen Lab Route --- */}
-        <Route
-          path="/lab/profile-projector"
-          element={<ProfileProjectorLabPage />}
-        />
+        <Route path="/lab" element={<ProfileProjectorLabPage />} />
       </Routes>
     </Router>
   );

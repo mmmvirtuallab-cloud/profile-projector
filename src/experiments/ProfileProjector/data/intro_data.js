@@ -7,7 +7,7 @@ export const INTRO_CONTENT = {
     buttonLabel: "Go to Experiment",
     // NOTE: In React Router, we usually use the internal path rather than the full URL.
     // If you want to link externally, use the full URL. If internal, use "/lab/profile-projector"
-    buttonLink: "/lab/profile-projector", 
+    buttonLink: "/lab", 
 
     // Main Page Content
     mainHeading: "Profile Projector ",

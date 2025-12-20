@@ -36,6 +36,7 @@ const IntroPage = () => {
               <p>{INTRO_CONTENT.ackContent}</p>
             </div>
 
+            {/* Student List Grid */}
             <ul className="student-list">
               {INTRO_CONTENT.students.map((student, index) => (
                 <li key={index}>{student}</li>
@@ -45,9 +46,16 @@ const IntroPage = () => {
         </div>
       </main>
 
-      {/* --- Footer Added Here --- */}
+      {/* Footer (Clean Single Line) */}
       <footer className="intro-footer">
-        <p>{INTRO_CONTENT.footerText}</p>
+        {/* Using a simple string or dangerouslySetInnerHTML if you have entities like &copy; */}
+        <p
+          dangerouslySetInnerHTML={{
+            __html:
+              INTRO_CONTENT.footerText ||
+              "&copy; 2025 Virtual Laboratory. Department of Mechanical Engineering.",
+          }}
+        />
       </footer>
     </div>
   );
