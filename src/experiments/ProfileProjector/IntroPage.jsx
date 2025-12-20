@@ -6,17 +6,36 @@ import "./IntroPage.css";
 const IntroPage = () => {
   const navigate = useNavigate();
 
+  // Function to handle external navigation to the main site Home
+  const handleHomeClick = () => {
+    // This breaks out of the HashRouter (#) and goes to domain.com/home/
+    window.location.href = "/home/";
+  };
+
   return (
     <div className="intro-container">
       {/* Header */}
       <header className="intro-header">
         <div className="header-title">{INTRO_CONTENT.headerTitle}</div>
-        <button
-          className="header-btn"
-          onClick={() => navigate(INTRO_CONTENT.buttonLink)}
-        >
-          {INTRO_CONTENT.buttonLabel} →
-        </button>
+
+        {/* Buttons Wrapper */}
+        <div className="header-actions">
+          {/* HOME BUTTON - Exits the React App */}
+          <button className="header-btn home-btn" onClick={handleHomeClick}>
+            Home
+          </button>
+
+          {/* EXPERIMENT BUTTON - Navigates inside the App */}
+          <button
+            className="header-btn"
+            // If the link is internal (like '/lab'), use navigate.
+            // If it's external in your data, keep window.open or navigate as needed.
+            // Assuming based on your Router that you want to go to '/lab':
+            onClick={() => navigate("/lab")}
+          >
+            {INTRO_CONTENT.buttonLabel} →
+          </button>
+        </div>
       </header>
 
       {/* Main Content */}
@@ -46,14 +65,13 @@ const IntroPage = () => {
         </div>
       </main>
 
-      {/* Footer (Clean Single Line) */}
+      {/* Footer */}
       <footer className="intro-footer">
-        {/* Using a simple string or dangerouslySetInnerHTML if you have entities like &copy; */}
         <p
           dangerouslySetInnerHTML={{
             __html:
               INTRO_CONTENT.footerText ||
-              "&copy; 2025 Virtual Laboratory. Department of Mechanical Engineering.",
+              "Developed and coordinated by: Dr. S.Vijayakumar, Dr.S.Sathish Department of Production Technology, MIT Campus, Anna University, Chennai.",
           }}
         />
       </footer>
