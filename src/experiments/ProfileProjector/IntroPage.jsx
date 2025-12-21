@@ -12,6 +12,19 @@ const IntroPage = () => {
     window.location.href = "/home/";
   };
 
+  // Function to handle Experiment Click with Mobile Warning
+  const handleExperimentClick = () => {
+    // Check if screen width is mobile (less than or equal to 768px)
+    if (window.innerWidth <= 768) {
+      alert(
+        "This experiment is designed for larger screens (Laptop/Desktop). Please switch to a larger device for the best experience."
+      );
+    } else {
+      // If desktop/tablet, navigate normally
+      navigate("/lab");
+    }
+  };
+
   return (
     <div className="intro-container">
       {/* Header */}
@@ -26,13 +39,7 @@ const IntroPage = () => {
           </button>
 
           {/* EXPERIMENT BUTTON - Navigates inside the App */}
-          <button
-            className="header-btn"
-            // If the link is internal (like '/lab'), use navigate.
-            // If it's external in your data, keep window.open or navigate as needed.
-            // Assuming based on your Router that you want to go to '/lab':
-            onClick={() => navigate("/lab")}
-          >
+          <button className="header-btn" onClick={handleExperimentClick}>
             {INTRO_CONTENT.buttonLabel} →
           </button>
         </div>

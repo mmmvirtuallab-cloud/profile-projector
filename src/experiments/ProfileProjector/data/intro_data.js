@@ -1,16 +1,16 @@
 // src/intro_data.js
 export const INTRO_CONTENT = {
     // Top Blue Bar Text
-    headerTitle: "Profile Projector Virtual Lab",
+    headerTitle: "Profile Projector",
     
     // Button Text & Link
-    buttonLabel: "Go to Experiment",
+    buttonLabel: "Experiment",
     // NOTE: In React Router, we usually use the internal path rather than the full URL.
     // If you want to link externally, use the full URL. If internal, use "/lab/profile-projector"
     buttonLink: "/lab", 
 
     // Main Page Content
-    mainHeading: "Profile Projector ",
+    mainHeading: "Profile Projector Virtual Experiment",
     
     // Aim Section
     aimTitle: "Aim",
