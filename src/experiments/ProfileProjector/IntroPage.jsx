@@ -9,7 +9,7 @@ const IntroPage = () => {
   // Function to handle external navigation to the main site Home
   const handleHomeClick = () => {
     // This breaks out of the HashRouter (#) and goes to domain.com/home/
-    window.location.href = "/home/";
+    window.location.href = "../home/";
   };
 
   // Function to handle Experiment Click with Mobile Warning
