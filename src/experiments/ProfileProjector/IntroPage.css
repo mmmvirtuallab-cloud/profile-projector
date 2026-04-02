@@ -138,25 +138,42 @@
   margin: 0;
 }
 
-/* --- Student Grid (2 Columns) --- */
-.student-list {
+/* --- Student Grid --- */
+.student-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 Columns */
-  gap: 10px 30px;
-  text-align: left; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
   padding: 0;
-  margin: 0;
-  list-style: none; /* Removes bullets */
+  margin-top: 10px;
 }
 
-.student-list li {
-  color: #334155;
-  font-weight: 500;
-  font-size: 1rem;
-  background-color: #f8fafc;
-  padding: 8px 12px;
-  border-radius: 6px;
+.student-card {
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.student-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #00000000;
+  margin-bottom: 8px;
+}
+
+.student-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.student-roll {
+  font-size: 0.8rem;
+  color: #64748b;
 }
 
 /* --- Footer (Single Line) --- */
@@ -279,15 +296,19 @@
     }
 
     /* 6. Student Grid */
-    .student-list {
-        grid-template-columns: 1fr; /* 1 Column */
+    .student-grid {
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
-        padding-bottom: 10px; /* Space at bottom of scroll */
+        padding-bottom: 10px;
     }
 
-    .student-list li {
-        padding: 8px 10px; 
-        font-size: 0.85rem;
+    .student-card {
+        padding: 10px; 
+    }
+
+    .student-card img {
+        width: 70px;
+        height: 70px;
     }
 
     /* 7. Footer: ALWAYS VISIBLE */
